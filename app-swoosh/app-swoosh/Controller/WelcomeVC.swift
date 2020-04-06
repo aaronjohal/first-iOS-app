@@ -9,9 +9,7 @@
 import UIKit
 
 class WelcomeVC: UIViewController {
-    
-    @IBOutlet weak var swoosh: UIImageView!
-      @IBOutlet weak var bgImg: UIImageView!
+
       
 
     override func viewDidLoad() {
@@ -19,7 +17,6 @@ class WelcomeVC: UIViewController {
         // Do any additional setup after loading the view.
  
     }
-    
     
     //go back from IB button to this view controlelr
     @IBAction func exitFromSkillsViewController (goBackSegue : UIStoryboardSegue){

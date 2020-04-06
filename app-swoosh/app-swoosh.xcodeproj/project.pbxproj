@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B49AF94D243BC74E00BDA57E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49AF94C243BC74E00BDA57E /* Player.swift */; };
 		B4A596982438E23400471EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A596972438E23400471EA7 /* AppDelegate.swift */; };
 		B4A5969A2438E23400471EA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A596992438E23400471EA7 /* SceneDelegate.swift */; };
 		B4A5969C2438E23400471EA7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5969B2438E23400471EA7 /* WelcomeVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B49AF94C243BC74E00BDA57E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B4A596942438E23400471EA7 /* app-swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-swoosh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A596972438E23400471EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A596992438E23400471EA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		B4F39500243B90530094F648 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B49AF94C243BC74E00BDA57E /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				B4F39506243B92300094F648 /* SkillVC.swift in Sources */,
 				B4A596982438E23400471EA7 /* AppDelegate.swift in Sources */,
 				B4A5969A2438E23400471EA7 /* SceneDelegate.swift in Sources */,
+				B49AF94D243BC74E00BDA57E /* Player.swift in Sources */,
 				B4A596AD2438EAC400471EA7 /* BorderButton.swift in Sources */,
 				B4A596AF243A11C000471EA7 /* ButtonHighlight.swift in Sources */,
 				B4F39504243B91D10094F648 /* LeagueVC.swift in Sources */,

@@ -152,7 +152,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-xQ-9Te" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-xQ-9Te" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="29" y="577" width="317" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.63096941019999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -199,6 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cOI-5E-L7k"/>
                     <connections>
+                        <outlet property="nxtButton" destination="rXT-xQ-9Te" id="jjM-bM-R8L"/>
                         <segue destination="Xl5-sJ-j9n" kind="show" identifier="SkillVCSegue" id="kvI-eh-ze9"/>
                     </connections>
                 </viewController>

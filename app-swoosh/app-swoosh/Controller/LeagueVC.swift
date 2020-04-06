@@ -10,28 +10,34 @@ import UIKit
 
 class LeagueVC: UIViewController {
     
-    var selectedChoice :String?
+   var player : Player!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        player = Player()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var nxtButton: BorderButton!
     
     @IBAction func menSelected(_ sender: UIButton) {
-        selectedChoice = sender.currentTitle
+       selectedLeague(desiredLeague: "mens")
     }
-    
     
     @IBAction func womenSelected(_ sender: UIButton) {
-        selectedChoice = sender.currentTitle
+        selectedLeague(desiredLeague: "womens")
+      
     }
-    
-    
  
     @IBAction func coEdSelected(_ sender: UIButton) {
-          selectedChoice = sender.currentTitle
+        selectedLeague(desiredLeague: "coed")
+       
+    }
+    
+    func selectedLeague (desiredLeague : String){
+        player.desiredLeague = desiredLeague
+        nxtButton.isEnabled = true
     }
     
     
@@ -42,23 +48,9 @@ class LeagueVC: UIViewController {
           
     
     @IBAction func onNextTapped(_ sender: Any) {
-        
-        switch selectedChoice {
-            
-        case "Womens":
-            print ("Womens was selected")
-        case "Mens":
-            print ("Mens was selected")
-        case "Co-ed":
-            print ("Co-ed was selected")
-        default:
-            print("Nothing was selected")
-        }
+              
         performSegue(withIdentifier: "SkillVCSegue", sender: self)
-        
-        
-
-        
+       
          }
 
 

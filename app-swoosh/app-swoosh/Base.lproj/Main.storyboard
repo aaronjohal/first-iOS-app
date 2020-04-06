@@ -120,6 +120,9 @@
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Mens"/>
+                                        <connections>
+                                            <action selector="menSelected:" destination="w0b-Cw-t8i" eventType="touchUpInside" id="qQ3-t0-H5Q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-8k-olj" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="317" height="50"/>
@@ -130,6 +133,9 @@
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Womens"/>
+                                        <connections>
+                                            <action selector="womenSelected:" destination="w0b-Cw-t8i" eventType="touchUpInside" id="IIF-zZ-y0h"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2P-rt-Of0" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="317" height="50"/>
@@ -140,6 +146,9 @@
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Co-ed"/>
+                                        <connections>
+                                            <action selector="coEdSelected:" destination="w0b-Cw-t8i" eventType="touchUpInside" id="RLp-9d-cCA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

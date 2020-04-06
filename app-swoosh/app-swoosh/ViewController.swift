@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
  
     }
+    
+    
+    //go back from IB button to this view controlelr
+    @IBAction func exitFromSkillsViewController (goBackSegue : UIStoryboardSegue){
+        
+    }
   
 }
 

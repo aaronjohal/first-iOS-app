@@ -18,7 +18,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="Mst-8H-bX2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="n4e-P4-BVp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="n4e-P4-BVp">
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecV-Lt-YwB">
@@ -63,7 +63,7 @@
                             <constraint firstItem="WAe-wV-syK" firstAttribute="width" secondItem="ecV-Lt-YwB" secondAttribute="width" multiplier="0.911538" id="3U6-wZ-7N6"/>
                             <constraint firstItem="Mst-8H-bX2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5vt-O2-HRU"/>
                             <constraint firstItem="6rL-2j-Hiv" firstAttribute="top" secondItem="WAe-wV-syK" secondAttribute="bottom" id="6bA-5b-FTI"/>
-                            <constraint firstItem="n4e-P4-BVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="B6H-tI-ZMP"/>
+                            <constraint firstItem="n4e-P4-BVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="B6H-tI-ZMP"/>
                             <constraint firstItem="Mst-8H-bX2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BdL-3p-xeL"/>
                             <constraint firstItem="WAe-wV-syK" firstAttribute="top" secondItem="ecV-Lt-YwB" secondAttribute="bottom" id="S9n-WL-Vci"/>
                             <constraint firstItem="Mst-8H-bX2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TqJ-Nm-bao"/>
@@ -72,16 +72,12 @@
                             <constraint firstItem="WAe-wV-syK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fey-Tx-uJg"/>
                             <constraint firstItem="ecV-Lt-YwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHA-UY-ZN2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UJp-Tj-DKC" secondAttribute="bottom" constant="20" id="mcq-M8-7o5"/>
-                            <constraint firstItem="ecV-Lt-YwB" firstAttribute="top" secondItem="n4e-P4-BVp" secondAttribute="bottom" constant="85" id="pE2-9S-ZD8"/>
+                            <constraint firstItem="ecV-Lt-YwB" firstAttribute="top" secondItem="n4e-P4-BVp" secondAttribute="bottom" constant="65" id="pE2-9S-ZD8"/>
                             <constraint firstItem="n4e-P4-BVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qoY-qv-o4y"/>
                             <constraint firstItem="6rL-2j-Hiv" firstAttribute="centerX" secondItem="WAe-wV-syK" secondAttribute="centerX" id="yqM-uF-rnX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="Mst-8H-bX2" id="AvH-iN-59v"/>
-                        <outlet property="swoosh" destination="n4e-P4-BVp" id="d90-I2-qKZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,6 +152,9 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="w0b-Cw-t8i" eventType="touchUpInside" id="YQ5-LG-UGp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umC-BE-0pE">
                                 <rect key="frame" x="10" y="10" width="29" height="24"/>
@@ -165,7 +164,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="xc5-MW-bVs" kind="unwind" unwindAction="unwindFromSkillsViewControllerWithGoBackSegue:" id="UYI-ya-BCD"/>
+                                    <segue destination="xc5-MW-bVs" kind="unwind" unwindAction="exitFromSkillsViewControllerWithGoBackSegue:" id="tiA-ds-mih"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,6 +189,9 @@
                         <viewLayoutGuide key="safeArea" id="lot-H9-tYy"/>
                     </view>
                     <navigationItem key="navigationItem" id="cOI-5E-L7k"/>
+                    <connections>
+                        <segue destination="Xl5-sJ-j9n" kind="show" identifier="SkillVCSegue" id="kvI-eh-ze9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGl-Ky-0jU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xc5-MW-bVs" userLabel="Exit" sceneMemberID="exit"/>
@@ -201,11 +203,11 @@
             <objects>
                 <viewController id="Xl5-sJ-j9n" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSa-8Z-Bfv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="7Z1-1l-D61">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-1p-dhX">
                                 <rect key="frame" x="0.0" y="20" width="375" height="90.5"/>
@@ -241,7 +243,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ae-qn-Kgk" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <rect key="frame" x="20" y="577" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.63096941019999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jVq-a6-GmN"/>

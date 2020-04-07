@@ -40,18 +40,17 @@ class LeagueVC: UIViewController {
         nxtButton.isEnabled = true
     }
     
-    
-    //create IB Actions for the 3 buttons
-          //get the value from the button and store it in an object
-          //set a method to check which value/button has been pressed
-          //in this function, when the 'next' button is pressed, determine what has been selected
-          
-    
+
     @IBAction func onNextTapped(_ sender: Any) {
-              
         performSegue(withIdentifier: "SkillVCSegue", sender: self)
        
          }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player //handover
+        }
+    }
 
 
 }
